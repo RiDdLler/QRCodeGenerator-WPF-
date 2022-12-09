@@ -1,0 +1,40 @@
+﻿<Window x:Class="WpfQRGenerator.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfQRGenerator"
+        mc:Ignorable="d"
+        Title="QrGenerator" Height="400" Width="300">
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="25"></RowDefinition>
+            <RowDefinition Height="70"></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Label Grid.Row="0" 
+               VerticalContentAlignment="Center"
+               HorizontalContentAlignment="Left">Текст для Кодирования</Label>
+        <TextBox Grid.Row="1" x:Name="tbxQrText"/>
+
+        <Label Grid.Row="2" 
+               VerticalContentAlignment="Center"
+               HorizontalContentAlignment="Left">Текст Для Кодирования</Label>
+        <StackPanel Grid.Row="3" Orientation="Horizontal" VerticalAlignment="Center"
+                    x:Name="rdSize">
+            <RadioButton Margin="5,0,0,0"  IsChecked="False">1</RadioButton>
+            <RadioButton Margin="5,0,0,0"  IsChecked="False">2</RadioButton>
+            <RadioButton Margin="5,0,0,0"  IsChecked="False">3</RadioButton>
+            <RadioButton Margin="5,0,0,0"  IsChecked="False">4</RadioButton>
+            <RadioButton Margin="5,0,0,0"  IsChecked="False">5</RadioButton>
+            <RadioButton Margin="5,0,0,0"  IsChecked="False">6</RadioButton>
+        </StackPanel>
+        <Button Grid.Row="5" Height="20"
+                x:Name="btnGenerate"
+                Click="btnGenerate_Click">Сгенерировать Qr-code</Button>
+    </Grid>
+</Window>
